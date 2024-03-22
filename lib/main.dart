@@ -50,7 +50,13 @@ class _ContadorState extends State<Contador> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Container(
+        decoration: BoxDecoration(
+          
+          image: DecorationImage(image: AssetImage("imagens/restaurant.png"),
+          fit: BoxFit.cover)
+        ),
+       child:  Column(
         mainAxisAlignment:MainAxisAlignment.center ,
         children: [
           Text(contador==30?"Casa cheia":"Pode entrar", style: TextStyle(fontSize: 30.0, color: Color(0xffffffff),),),
@@ -76,11 +82,10 @@ class _ContadorState extends State<Contador> {
           ),
           Text(aviso, style: TextStyle(fontSize: 15.0,color: Color(0xffffffff)),)
 
-        ],
-
-        
+        ], 
       ),
-      backgroundColor: const Color.fromARGB(223, 255, 0, 140),
+      )
+      
     );
   }
 }
